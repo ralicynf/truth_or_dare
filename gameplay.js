@@ -22,7 +22,7 @@ function truth() {
 
   function getTruth() {
     let randomTruth = Math.floor(Math.random() * truthQuestions.length)
-    return (truthQuestions[randomTruth] = truthH1.innerText)
+    return (truthH1.innerText = truthQuestions[randomTruth])
   }
   getTruth()
 
