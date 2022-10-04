@@ -9,16 +9,19 @@
   <title>Truth or Dare!</title>
 </head>
 <body>
-  <div>
+  <section class="playerNames">
     <h2>Enter player names:</h2>
     <div>
       <form>
-        <input type="text" id="usernames" placeholder="Enter player name">
-        <button type="button" id="enterButton">Enter</button>
+        <input type="text" id="playerUno" placeholder="Enter player 1">
+        <input type="text" id="playerDos" placeholder="Enter player 2">
+        <input type="text" id="playerTres" placeholder="Enter player 3">
+        <input type="text" id="playerCuatro" placeholder="Enter player 4">
+        <button type="button" id="enterPlayerButton">Enter</button>
       </form>
     </div>
-    <button type="button" id="readyPlayButton" onclick="location.href='gameplay.html'">Ready to play!</button>
-  </div>
+  </section>
+  <button type="button" id="readyPlayButton" onclick="location.href='gameplay.html'">Ready to play!</button>
   <div>
     <button type="button" id="homeButton" onclick="location.href='home.html'">Home</button>
   </div>
