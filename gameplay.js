@@ -17,6 +17,20 @@ const truthQuestions = [
   "What's the meanest thing you've ever said to someone else?"
 ]
 
+const dareQuestions = [
+  'Do freestyle rap for 1 minute about the other participants.',
+  'Smell every other players’ armpits.',
+  'Kiss the person to your left.',
+  'Do an impression of another player until someone can figure out who it is.',
+  'Call your crush.',
+  'Dance with no music for 1 minute.',
+  'Let the person on your right draw on your face.',
+  'Give your phone to another player who can send one text saying anything they want to one of your contacts.',
+  'Drink lemon juice.',
+  'Crack an egg on our head.',
+  'Swap clothes with someone of the opposite sex for 2 rounds.'
+]
+
 function truth() {
   let truthH1 = document.createElement('h1')
 
@@ -29,11 +43,20 @@ function truth() {
   document.getElementById('questionSpot').appendChild(truthH1)
 }
 
-// function dare() {
-// }
+function dare() {
+  let dareH1 = document.createElement('h1')
+
+  function getDare() {
+    let randomDare = Math.floor(Math.random() * dareQuestions.length)
+    return (dareH1.innerText = dareQuestions[randomDare])
+  }
+  getDare()
+
+  document.getElementById('questionSpot').appendChild(dareH1)
+}
 
 truthBtn.addEventListener('click', truth)
-// //dareButton.addEventListener('click', dare())
+dareBtn.addEventListener('click', dare)
 
 // class Player {
 //   constructor(name) {
