@@ -17,3 +17,27 @@ body {
   padding: 10px 30px;
   font-size: 5vw; 
 }
+
+.todOptions {
+  display: inline;
+}
+
+.completeOrNah {
+  display: none
+}
+/* 
+#truthButton {
+  display: inline;
+}
+
+#dareButton {
+  display: inline;
+}
+
+#completedButton {
+  display: none;
+}
+
+#forfeitButton {
+  display: none
+} */

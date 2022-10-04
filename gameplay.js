@@ -3,6 +3,13 @@ const truthBtn = document.getElementById('truthButton')
 
 const dareBtn = document.getElementById('dareButton')
 
+const completeBtn = document.getElementById('completedButton')
+
+const forfeitBtn = document.getElementById('forfeitButton')
+
+const todButtons = document.getElementsByClassName('todOptions')
+const conButtons = document.getElementsByClassName('completeOrNah')
+
 const truthQuestions = [
   "What's the last lie you told?",
   "What was the most embarrassing thing you've ever done on a date?",
@@ -19,7 +26,7 @@ const truthQuestions = [
 
 const dareQuestions = [
   'Do freestyle rap for 1 minute about the other participants.',
-  'Smell every other players’ armpits.',
+  'Smell every other players armpits.',
   'Kiss the person to your left.',
   'Do an impression of another player until someone can figure out who it is.',
   'Call your crush.',
@@ -39,6 +46,14 @@ function truth() {
     return (truthH1.innerText = truthQuestions[randomTruth])
   }
   getTruth()
+
+  function switchButton() {
+    truthBtn.style.display = 'none'
+    dareBtn.style.display = 'none'
+    completeBtn.style.display = 'inline'
+    forfeitBtn.style.display = 'inline'
+  }
+  switchButton()
 
   document.getElementById('questionSpot').appendChild(truthH1)
 }
