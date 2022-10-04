@@ -1,4 +1,5 @@
 console.log('Hey whats up hello')
+
 const truthBtn = document.getElementById('truthButton')
 
 const dareBtn = document.getElementById('dareButton')
