@@ -12,6 +12,10 @@ const scoreboard = document.getElementById('leaderboard')
 const thankYouNext = document.getElementById('nextTurnButton')
 const insertQuestion = document.getElementById('insertQuestionHere')
 const playerScoreNames = document.getElementById('playerScoreNames')
+const playerTurns = document.querySelectorAll('.thePlayers')
+let clicked; 
+let dare;
+let truth;
 
 let players = []
 
@@ -88,6 +92,8 @@ function truth() {
     let randomTruth = Math.floor(Math.random() * truthQuestions.length)
     return (insertQuestion.innerText = truthQuestions[randomTruth])
   }
+  truth = true; 
+  dare = false; 
   getTruth()
   switchButtons()
   console.log(players)
@@ -98,6 +104,8 @@ function dare() {
     let randomDare = Math.floor(Math.random() * dareQuestions.length)
     return (insertQuestion.innerText = dareQuestions[randomDare])
   }
+  truth = false;
+  dare = true;
   getDare()
   switchButtons()
 }
@@ -107,16 +115,20 @@ function addPlayersScoreboard() {
         //add h3 name
         let h3Name = document.createElement('h3')
         //add h3 score
-        let h3Score = document.createElement('h3')
+        //let h3Score = document.createElement('h3')
         //set attribute
         h3Name.setAttribute('class', 'thePlayers')
-        h3Score.setAttribute('class', 'scores')
+        //h3Score.setAttribute('class', 'scores')
         //append h3 name and score to playerScoreNames
         playerScoreNames.appendChild(h3Name)
-        playerScoreNames.appendChild(h3Score)
+        //playerScoreNames.appendChild(h3Score)
         //set innerText of h3 name to players[i]
         h3Name.innerText = players[i]
     }
+}
+
+function addPoints() {
+
 }
 
 function showScoreboard() {
@@ -139,9 +151,16 @@ function welcomeBackGameboard() {
     thankYouNext.style.display = 'none'
 }
 
+function addPointsDare() {
+    if (clicked = true) {
+        //points 
+    }
+}
+
 function completed() {
     removeGameboard()
     showScoreboard()
+
 }
 
 function forfeit() {
@@ -161,6 +180,9 @@ forfeitBtn.addEventListener('click', forfeit)
 thankYouNext.addEventListener('click', nextTurn)
 
 
+function playerTurn() {
+    players[0]
+}
 
 //rounds--player 1 goes, player 2 goes, (player 3 and 4 go if there's a player 3 and 4)
 //shows score after each turn (or round?)
