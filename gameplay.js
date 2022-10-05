@@ -9,6 +9,8 @@ const conButtons = document.getElementById('completeOrNah')
 const playerEntryScreen = document.getElementById('enterPlayerScreen')
 const gameboard = document.getElementById('whereToPlay')
 const scoreboard = document.getElementById('leaderboard')
+const thankYouNext = document.getElementById('nextTurnButton')
+const insertQuestion = document.getElementById('insertQuestionHere')
 
 let players = []
 
@@ -32,7 +34,12 @@ function enterPlayer() {
   return players
 }
 
-addPlayerButton.addEventListener('click', enterPlayer)
+let playerOne = players[0]
+let playerTwo = players[1]
+let playerThree = players[2]
+let playerFour = players[3]
+
+addPlayerButton.addEventListener('click', enterPlayer, console.log(playerOne))
 console.log(players)
 
 function startGame() {
@@ -43,9 +50,6 @@ function startGame() {
         alert('Add more players!')
     }
 }
-
-startGameButton.addEventListener("click", startGame)
-
 
 const truthQuestions = [
   "What's the last lie you told?",
@@ -83,38 +87,59 @@ function switchButtons() {
   }
 
 function truth() {
-  let truthH1 = document.createElement('h1')
-
   function getTruth() {
     let randomTruth = Math.floor(Math.random() * truthQuestions.length)
-    return (truthH1.innerText = truthQuestions[randomTruth])
+    return (insertQuestion.innerText = truthQuestions[randomTruth])
   }
   getTruth()
   switchButtons()
-
-  document.getElementById('questionSpot').appendChild(truthH1)
 }
 
 function dare() {
-  let dareH1 = document.createElement('h1')
-
   function getDare() {
     let randomDare = Math.floor(Math.random() * dareQuestions.length)
-    return (dareH1.innerText = dareQuestions[randomDare])
+    return (insertQuestion.innerText = dareQuestions[randomDare])
   }
   getDare()
   switchButtons()
-
-  document.getElementById('questionSpot').appendChild(dareH1)
 }
-
-truthBtn.addEventListener('click', truth)
-dareBtn.addEventListener('click', dare)
 
 function showScoreboard() {
     scoreboard.style.display = 'inline'
+    thankYouNext.style.display = 'inline'
+}
+
+function removeGameboard() {
+    gameboard.style.display = 'none'
+    insertQuestion.innerText = ''
+}
+
+function welcomeBackGameboard() {
+    gameboard.style.display = 'inline'
+    truthBtn.style.display = 'inline'
+    dareBtn.style.display = 'inline'
+    completeBtn.style.display = 'none'
+    forfeitBtn.style.display = 'none'
+    scoreboard.style.display = 'none'
+}
+
+function completed() {
+    removeGameboard()
+    showScoreboard()
+}
+
+function forfeit() {
+    removeGameboard()
+    showScoreboard()
 }
 
 function nextTurn() {
-
+    welcomeBackGameboard()
 }
+
+startGameButton.addEventListener("click", startGame)
+truthBtn.addEventListener('click', truth)
+dareBtn.addEventListener('click', dare)
+completeBtn.addEventListener('click', completed)
+forfeitBtn.addEventListener('click', forfeit)
+thankYouNext.addEventListener('click', nextTurn)
