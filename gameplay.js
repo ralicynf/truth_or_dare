@@ -11,6 +11,7 @@ const gameboard = document.getElementById('whereToPlay')
 const scoreboard = document.getElementById('leaderboard')
 const thankYouNext = document.getElementById('nextTurnButton')
 const insertQuestion = document.getElementById('insertQuestionHere')
+const playerScoreNames = document.getElementById('playerScoreNames')
 
 let players = []
 
@@ -34,12 +35,7 @@ function enterPlayer() {
   return players
 }
 
-let playerOne = players[0]
-let playerTwo = players[1]
-let playerThree = players[2]
-let playerFour = players[3]
-
-addPlayerButton.addEventListener('click', enterPlayer, console.log(playerOne))
+addPlayerButton.addEventListener('click', enterPlayer)
 console.log(players)
 
 function startGame() {
@@ -49,6 +45,7 @@ function startGame() {
     } else if (players.length < 2) {
         alert('Add more players!')
     }
+    addPlayersScoreboard()
 }
 
 const truthQuestions = [
@@ -93,6 +90,7 @@ function truth() {
   }
   getTruth()
   switchButtons()
+  console.log(players)
 }
 
 function dare() {
@@ -102,6 +100,23 @@ function dare() {
   }
   getDare()
   switchButtons()
+}
+
+function addPlayersScoreboard() {
+    for (i=0; i < players.length; i++) {
+        //add h3 name
+        let h3Name = document.createElement('h3')
+        //add h3 score
+        let h3Score = document.createElement('h3')
+        //set attribute
+        h3Name.setAttribute('class', 'thePlayers')
+        h3Score.setAttribute('class', 'scores')
+        //append h3 name and score to playerScoreNames
+        playerScoreNames.appendChild(h3Name)
+        playerScoreNames.appendChild(h3Score)
+        //set innerText of h3 name to players[i]
+        h3Name.innerText = players[i]
+    }
 }
 
 function showScoreboard() {
@@ -121,6 +136,7 @@ function welcomeBackGameboard() {
     completeBtn.style.display = 'none'
     forfeitBtn.style.display = 'none'
     scoreboard.style.display = 'none'
+    thankYouNext.style.display = 'none'
 }
 
 function completed() {
@@ -143,3 +159,8 @@ dareBtn.addEventListener('click', dare)
 completeBtn.addEventListener('click', completed)
 forfeitBtn.addEventListener('click', forfeit)
 thankYouNext.addEventListener('click', nextTurn)
+
+
+
+//rounds--player 1 goes, player 2 goes, (player 3 and 4 go if there's a player 3 and 4)
+//shows score after each turn (or round?)
