@@ -1,5 +1,7 @@
 console.log('player page')
 
+
+
 const addPlayerButton = document.getElementById('enterPlayerButton')
 let players = []
 

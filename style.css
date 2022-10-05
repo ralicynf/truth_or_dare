@@ -18,6 +18,18 @@ body {
   font-size: 5vw; 
 }
 
+.enterPlayers {
+  display: inline-block
+}
+
+.gameboard {
+  display: none
+}
+
+.scoreboard {
+  display: none
+}
+
 .todOptions {
   display: inline;
 }
@@ -25,7 +37,7 @@ body {
 .completeOrNah {
   display: none
 }
-/* 
+
 #truthButton {
   display: inline;
 }
@@ -40,4 +52,4 @@ body {
 
 #forfeitButton {
   display: none
-} */
+}

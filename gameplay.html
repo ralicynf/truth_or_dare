@@ -13,24 +13,43 @@
     <button type="button" id="homeButton" onclick="location.href='home.html'">Home</button>
     <h1>Truth or Dare!</h1>
   </header>
-  <section id="questionSpot">
+  <div class="enterPlayers" id="enterPlayerScreen">
+    <section class="playerNames" id="mainSection">
+      <h2>Enter player names:</h2>
+      <div>
+        <form id="inputList">
+          <input type="text" id="playerName" placeholder="Enter player name">
+          <button type="button" id="enterPlayerButton">Enter</button>
+        </form>
+      </div>
+    </section>
+    <button type="button" id="readyPlayButton">Ready to play!</button>
+    <div>
+      <button type="button" id="homeButton" onclick="location.href='home.html'">Home</button>
+    </div>
+  </div>
+
+  <div class="gameboard" id="whereToPlay">
+    <section id="questionSpot">
+    </section>
+    <div class="todOptions">
+      <button type="button" id="truthButton">Truth</button>
+      <button type="button" id="dareButton">Dare</button>
+    </div>
+    <div class="completeOrNah">
+      <button type="button" id="completedButton">Completed</button>
+      <button type="button" id="forfeitButton">Forfeit</button>
+    </div>
+    <div id="nextTurnButton">
+      <button type="button" id="nextTurnButton">Next Turn</button>
+    </div>
+  </div>
+
+  <div class="scoreboard" id="leaderboard">
+      <h3>Leaderboard</h3>
+      <div></div>
+      <div></div>
+  </div>
     
-  </section>
-  <div class="todOptions">
-    <button type="button" id="truthButton">Truth</button>
-    <button type="button" id="dareButton">Dare</button>
-  </div>
-  <div class="completeOrNah">
-    <button type="button" id="completedButton">Completed</button>
-    <button type="button" id="forfeitButton">Forfeit</button>
-  </div>
-  <div class="scoreboard">
-    <h3>Leaderboard</h3>
-    <div></div>
-    <div></div>
-  </div>
-  <div>
-    <button type="button" id="nextTurnButton">Next Turn</button>
-  </div>
 </body>
 </html>
