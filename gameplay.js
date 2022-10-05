@@ -4,8 +4,8 @@ const truthBtn = document.getElementById('truthButton')
 const dareBtn = document.getElementById('dareButton')
 const completeBtn = document.getElementById('completedButton')
 const forfeitBtn = document.getElementById('forfeitButton')
-const todButtons = document.getElementsByClassName('todOptions')
-const conButtons = document.getElementsByClassName('completeOrNah')
+const todButtons = document.getElementById('todOptions')
+const conButtons = document.getElementById('completeOrNah')
 const playerEntryScreen = document.getElementById('enterPlayerScreen')
 const gameboard = document.getElementById('whereToPlay')
 const scoreboard = document.getElementById('leaderboard')
@@ -36,8 +36,12 @@ addPlayerButton.addEventListener('click', enterPlayer)
 console.log(players)
 
 function startGame() {
+    if (players.length >= 2) {
     playerEntryScreen.style.display = 'none'
-    gameboard.style.display = 'inline'
+    gameboard.style.display = 'inline' 
+    } else if (players.length < 2) {
+        alert('Add more players!')
+    }
 }
 
 startGameButton.addEventListener("click", startGame)
@@ -71,6 +75,13 @@ const dareQuestions = [
   'Swap clothes with someone of the opposite sex for 2 rounds.'
 ]
 
+function switchButtons() {
+    truthBtn.style.display = 'none'
+    dareBtn.style.display = 'none'
+    completeBtn.style.display = 'inline'
+    forfeitBtn.style.display = 'inline'
+  }
+
 function truth() {
   let truthH1 = document.createElement('h1')
 
@@ -79,13 +90,6 @@ function truth() {
     return (truthH1.innerText = truthQuestions[randomTruth])
   }
   getTruth()
-
-  function switchButtons() {
-    truthBtn.style.display = 'none'
-    dareBtn.style.display = 'none'
-    completeBtn.style.display = 'inline'
-    forfeitBtn.style.display = 'inline'
-  }
   switchButtons()
 
   document.getElementById('questionSpot').appendChild(truthH1)
@@ -99,9 +103,18 @@ function dare() {
     return (dareH1.innerText = dareQuestions[randomDare])
   }
   getDare()
+  switchButtons()
 
   document.getElementById('questionSpot').appendChild(dareH1)
 }
 
 truthBtn.addEventListener('click', truth)
 dareBtn.addEventListener('click', dare)
+
+function showScoreboard() {
+    scoreboard.style.display = 'inline'
+}
+
+function nextTurn() {
+
+}
