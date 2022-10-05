@@ -13,9 +13,13 @@ const thankYouNext = document.getElementById('nextTurnButton')
 const insertQuestion = document.getElementById('insertQuestionHere')
 const playerScoreNames = document.getElementById('playerScoreNames')
 const playerTurns = document.querySelectorAll('.thePlayers')
-let clicked; 
-let dare;
-let truth;
+const playerScores = document.querySelectorAll('.scores')
+let completeClicked; 
+let isDare;
+// let p1turn = 0;
+// let p2turn = 0; 
+// let p3turn = 0;
+// let p4turn = 0;
 
 let players = []
 
@@ -92,10 +96,9 @@ function truth() {
     let randomTruth = Math.floor(Math.random() * truthQuestions.length)
     return (insertQuestion.innerText = truthQuestions[randomTruth])
   }
-  truth = true; 
-  dare = false; 
   getTruth()
   switchButtons()
+  isDare = false 
   console.log(players)
 }
 
@@ -104,8 +107,7 @@ function dare() {
     let randomDare = Math.floor(Math.random() * dareQuestions.length)
     return (insertQuestion.innerText = dareQuestions[randomDare])
   }
-  truth = false;
-  dare = true;
+  isDare = true;
   getDare()
   switchButtons()
 }
@@ -115,21 +117,26 @@ function addPlayersScoreboard() {
         //add h3 name
         let h3Name = document.createElement('h3')
         //add h3 score
-        //let h3Score = document.createElement('h3')
+        let h3Score = document.createElement('h3')
         //set attribute
         h3Name.setAttribute('class', 'thePlayers')
-        //h3Score.setAttribute('class', 'scores')
+        h3Score.setAttribute('class', 'scores')
         //append h3 name and score to playerScoreNames
         playerScoreNames.appendChild(h3Name)
-        //playerScoreNames.appendChild(h3Score)
+        playerScoreNames.appendChild(h3Score)
         //set innerText of h3 name to players[i]
         h3Name.innerText = players[i]
+        h3Score.innerText = 0
     }
 }
 
-function addPoints() {
-
-}
+// function addPoints() {
+//     if (dare === true && completedClicked === true) {
+//         //add 3 points
+//     } else if (dare === false && completedClicked === true) {
+//         //add 1 point
+//     }
+// }
 
 function showScoreboard() {
     scoreboard.style.display = 'inline'
@@ -151,13 +158,14 @@ function welcomeBackGameboard() {
     thankYouNext.style.display = 'none'
 }
 
-function addPointsDare() {
-    if (clicked = true) {
-        //points 
-    }
-}
+// function addPointsDare() {
+//     if (clicked = true) {
+//         //points 
+//     }
+// }
 
 function completed() {
+    completeClicked = true
     removeGameboard()
     showScoreboard()
 
@@ -180,9 +188,9 @@ forfeitBtn.addEventListener('click', forfeit)
 thankYouNext.addEventListener('click', nextTurn)
 
 
-function playerTurn() {
-    players[0]
-}
+// function playerTurn() {
+//     players[0]
+// }
 
 //rounds--player 1 goes, player 2 goes, (player 3 and 4 go if there's a player 3 and 4)
 //shows score after each turn (or round?)
