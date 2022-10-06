@@ -68,7 +68,6 @@ function truth() {
   getTruth()
   switchButtons()
   isTruth = true;
-  console.log(players)
 }
 
 function dare() {
