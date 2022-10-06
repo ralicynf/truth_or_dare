@@ -30,12 +30,10 @@ function enterPlayer() {
   if (players.length < 4) {
     players.push(player.value)
 } else if (players.length >= 4) {
-    // let noMore = document.createElement('h2')
-    // let classPlayers = document.getElementByClassName('enterPlayers')
-    // classPlayers.appendChild(noMore)
-    // noMore.innerText = "You've reached player limit! Start game!"
-    alert(`You've reached player limit! You are ready to play!`)
-    console.log('No more players! Start game!')
+    let noMore = document.createElement('h2')
+    let classPlayers = document.getElementById('mainSection')
+    classPlayers.appendChild(noMore)
+    noMore.innerText = "You've reached player limit! Start game!"
 }
   clearInput()
   return players
@@ -49,7 +47,10 @@ function startGame() {
     playerEntryScreen.style.display = 'none'
     gameboard.style.display = 'inline' 
     } else if (players.length < 2) {
-        alert('Add more players!')
+        let addMore = document.createElement('h2')
+        let classPlayers = document.getElementById('mainSection')
+        classPlayers.appendChild(addMore)
+        addMore.innerText = "Must have at least two players!"
     }
     addPlayersScoreboard()
     playerTurn()
@@ -113,17 +114,12 @@ function dare() {
 
 function addPlayersScoreboard() {
     for (i=0; i < players.length; i++) {
-        //add h3 name
         let h3Name = document.createElement('h3')
-        //add h3 score
         let h3Score = document.createElement('h3')
-        //set attribute
         h3Name.setAttribute('class', 'thePlayers')
         h3Score.setAttribute('class', 'scores')
-        //append h3 name and score to playerScoreNames
         playerScoreNames.appendChild(h3Name)
         playerScoreNames.appendChild(h3Score)
-        //set innerText of h3 name to players[i]
         h3Name.innerText = players[i]
         h3Score.innerText = 0
     }
