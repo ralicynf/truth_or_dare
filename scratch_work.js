@@ -67,3 +67,47 @@
 // }
 // const becca = new Player('Becca')
 // console.log(becca.getTruth())
+
+
+
+// function addScore() {
+//     if (players.length === 1) {
+//         let p1score = document.createElement('h3')
+//         let p2score = document.createElement('h3')
+//         p1score.setAttribute = ('id', 'scorep1')
+//         p2score.setAttribute = ('id', 'scorep2')
+//         playerScoreNames.appendChild(p1score)
+//         playerScoreNames.appendChild(p2score)
+//         p1score.innerText = 0
+//         p2score.innerText = 0
+//     } else if (players.length === 2) {
+//         let p1score = document.createElement('h3')
+//         let p2score = document.createElement('h3')
+//         let p3score = document.createElement('h3')
+//         p1score.setAttribute = ('id', 'scorep1')
+//         p2score.setAttribute = ('id', 'scorep2')
+//         p3score.setAttribute = ('id', 'scorep3')
+//         playerScoreNames.appendChild(p1score)
+//         playerScoreNames.appendChild(p2score)
+//         playerScoreNames.appendChild(p3score)
+//         p1score.innerText = 0
+//         p2score.innerText = 0
+//         p3score.innerText = 0
+//     } else if (players.length === 3) {
+//         let p1score = document.createElement('h3')
+//         let p2score = document.createElement('h3')
+//         let p3score = document.createElement('h3')
+//         let p4score = document.createElement('h3')
+//         p1score.setAttribute = ('id', 'scorep1')
+//         p2score.setAttribute = ('id', 'scorep2')
+//         p3score.setAttribute = ('id', 'scorep3')
+//         p4score.setAttribute = ('id', 'scorep4')
+//         playerScoreNames.appendChild(p1score)
+//         playerScoreNames.appendChild(p2score)
+//         playerScoreNames.appendChild(p3score)
+//         playerScoreNames.appendChild(p4score)
+//         p1score.innerText = 0
+//         p2score.innerText = 0
+//         p3score.innerText = 0
+//         p4score.innerText = 0
+//     }

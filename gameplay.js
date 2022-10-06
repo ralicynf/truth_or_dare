@@ -14,14 +14,13 @@ const insertQuestion = document.getElementById('insertQuestionHere')
 const playerScoreNames = document.getElementById('playerScoreNames')
 const playerTurns = document.querySelectorAll('.thePlayers')
 const playerScores = document.querySelectorAll('.scores')
+const turn = document.getElementById('playerTurn')
 let completeClicked; 
+let forfeitClicked;
 let isDare;
-// let p1turn = 0;
-// let p2turn = 0; 
-// let p3turn = 0;
-// let p4turn = 0;
-
+let isTruth;
 let players = []
+let counter = 0;
 
 function clearInput() {
     document.getElementById('playerName').value = ''
@@ -54,6 +53,7 @@ function startGame() {
         alert('Add more players!')
     }
     addPlayersScoreboard()
+    playerTurn()
 }
 
 const truthQuestions = [
@@ -98,7 +98,7 @@ function truth() {
   }
   getTruth()
   switchButtons()
-  isDare = false 
+  isTruth = true;
   console.log(players)
 }
 
@@ -158,12 +158,6 @@ function welcomeBackGameboard() {
     thankYouNext.style.display = 'none'
 }
 
-// function addPointsDare() {
-//     if (clicked = true) {
-//         //points 
-//     }
-// }
-
 function completed() {
     completeClicked = true
     removeGameboard()
@@ -172,12 +166,21 @@ function completed() {
 }
 
 function forfeit() {
+    forfeitClicked = true
     removeGameboard()
     showScoreboard()
 }
 
 function nextTurn() {
+    isTrue = false
+    isDare = false
+    completeClicked = false
+    forfeitClicked = false
+    counter++
     welcomeBackGameboard()
+    resetCounter()
+    playerTurn()
+    console.log(counter)
 }
 
 startGameButton.addEventListener("click", startGame)
@@ -187,10 +190,41 @@ completeBtn.addEventListener('click', completed)
 forfeitBtn.addEventListener('click', forfeit)
 thankYouNext.addEventListener('click', nextTurn)
 
+function playerTurn() {
+    if (players.length === 2) {
+       if (counter === 0) {
+        turn.innerText = (players[0] + `'s Turn!`)
+       } else if (counter === 1) {
+        turn.innerText = (players[1] + `'s Turn!`)
+       }
+    } else if (players.length === 3) {
+        if (counter === 0) {
+            turn.innerText = (players[0] + `'s Turn!`)
+        } else if (counter === 1) {
+            turn.innerText = (players[1] + `'s Turn!`)
+        } else if (counter === 2) {
+            turn.innerText = (players[2] + `'s Turn!`)
+        }
+    } else if (players.length === 4) {
+        if (counter === 0) {
+            turn.innerText = (players[0] + `'s Turn!`)
+        } else if (counter === 1) {
+            turn.innerText = (players[1] + `'s Turn!`)
+        } else if (counter === 2) {
+            turn.innerText = (players[2] + `'s Turn!`)
+        } else if (counter === 3) {
+            turn.innerText = (players[3] + `'s Turn!`)
+        }
+    }
+}
 
-// function playerTurn() {
-//     players[0]
-// }
+function resetCounter() {
+    if (counter === players.length ) {
+        counter = 0
+    }
+}
 
 //rounds--player 1 goes, player 2 goes, (player 3 and 4 go if there's a player 3 and 4)
 //shows score after each turn (or round?)
+
+//if counter = players.length (reset counter)
