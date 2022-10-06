@@ -13,7 +13,6 @@ const thankYouNext = document.getElementById('nextTurnButton')
 const insertQuestion = document.getElementById('insertQuestionHere')
 const playerScoreNames = document.getElementById('playerScoreNames')
 const playerTurns = document.querySelectorAll('.thePlayers')
-const playerScores = document.querySelectorAll('.scores')
 const turn = document.getElementById('playerTurn')
 let completeClicked; 
 let forfeitClicked;
@@ -130,13 +129,30 @@ function addPlayersScoreboard() {
     }
 }
 
-// function addPoints() {
-//     if (dare === true && completedClicked === true) {
-//         //add 3 points
-//     } else if (dare === false && completedClicked === true) {
-//         //add 1 point
-//     }
-// }
+function addPoints() {
+    const playerScores = document.querySelectorAll('.scores')
+    if (isDare === true && completeClicked === true) {
+        if (counter === 0) {
+            playerScores[0].innerText = parseInt(playerScores[0].innerText) + 3
+        } else if (counter === 1) {
+            playerScores[1].innerText = parseInt(playerScores[1].innerText) + 3
+        } else if (counter === 2) {
+            playerScores[2].innerText = parseInt(playerScores[2].innerText) + 3
+        } else if (counter === 3) {
+            playerScores[3].innerText = parseInt(playerScores[3].innerText) + 3
+        }
+    } else if (isTruth === true && completeClicked === true) {
+        if (counter === 0) {
+            playerScores[0].innerText = parseInt(playerScores[0].innerText) + 1
+        } else if (counter === 1) {
+            playerScores[1].innerText = parseInt(playerScores[1].innerText) + 1
+        } else if (counter === 2) {
+            playerScores[2].innerText = parseInt(playerScores[2].innerText) + 1
+        } else if (counter === 3) {
+            playerScores[3].innerText = parseInt(playerScores[3].innerText) + 1
+        }
+    }
+}
 
 function showScoreboard() {
     scoreboard.style.display = 'inline'
@@ -161,6 +177,7 @@ function welcomeBackGameboard() {
 function completed() {
     completeClicked = true
     removeGameboard()
+    addPoints()
     showScoreboard()
 
 }
