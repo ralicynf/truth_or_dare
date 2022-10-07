@@ -1,21 +1,40 @@
 body {
-  color: #4d4d76; 
-  background-color: #e3e9fe;
+  color: #fad7d9; 
+  background-color: #0c0c0c;
+  background-image: linear-gradient(to bottom right, #0c0c0c, #272727);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   text-align: center;
+  padding: 40px 100px;
+  max-width: 600px;
+  margin: auto;
 }
 
 #logo {
-  font-family: 'Lobster', cursive;
-  font-size: 6vw 
+  color: #5394b8; 
+  font-family: 'Righteous', sans-serif;
+  font-size: 6vw;
+}
+
+#tagLine {
+  color: #c8e3f2;
+  font-size: 3vw; 
+  font-family: 'Jura', serif;
 }
 
 #letsPlayButton {
-  background-color: #4d4d76;
-  color: #e3e9fe;
+  background-image: linear-gradient(to right, #357aa1, #35564c);
+  color: #c8e3f2;
   border: 2px;
   border-color: #2e2e47;
+  border-radius: 30px; 
   padding: 10px 30px;
-  font-size: 5vw; 
+  font-family: 'Jura', serif;
+  font-size: 4vw; 
+  max-width: 40%; 
+  max-height: 20%;
 }
 
 .enterPlayers {
