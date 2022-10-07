@@ -24,21 +24,26 @@
 
 ### ***Getting Started***
 
-##### To start, a Trelio board was used to keep track of development progress and can be viewed [here](https://trello.com/b/rWf58B2v/truth-or-dare). This board was also used to map out every aspect of the game making process into small, easy to follow steps. 
+##### To start, a Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/rWf58B2v/truth-or-dare). This board was also used to map out every aspect of the game making process into small, easy to follow steps. 
 
 ***
 
 ### ***Screenshots*** 
 
-#### *Coming Soon*
-![image words](URL)
+#### *Custom Truth or Dare Logo*
+![Truth or Dare Logo](https://i.imgur.com/7dieTWk.png)
+
+#### *Start Screen*
+![Start Game screen](https://i.imgur.com/aLFFzGj.png)
 ***
 
 ### ***Future Updates***
 
 - [ ] Adding a mini game or wheel of points for extra points
 - [ ] Adding an adults version of the game
-***
+- [ ] Light Mode
+- [ ] Full API Integration
+ ***
 
 ### ***Credits***
 
@@ -46,5 +51,6 @@
 
 ##### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
 
+##### Continuously rotate image [Flaviocopes](https://flaviocopes.com/rotate-image/)
 
 ***

@@ -11,18 +11,11 @@ body {
   margin: 0 auto
 }
 
-#logo {
-  color: #5394b8; 
-  font-family: 'Righteous', sans-serif;
-  font-size: 6vw;
-
+#logoImg {
+  width: 500px;
+  margin: 40px 10px;
 }
 
-#tagLine {
-  color: #c8e3f2;
-  font-size: 3vw; 
-  font-family: 'Jura', serif;
-}
 
 #letsPlayButton {
   background-image: linear-gradient(to right, #357aa1, #35564c);
@@ -33,15 +26,17 @@ body {
   padding: 10px 30px;
   font-family: 'Jura', serif;
   font-size: 4vw; 
- 
 }
 
 @media (max-width: 600px) {
-  #logo {
-    font-size: 30px;
+  #logoImg {
+    width: 400px
+  }
+  #tagLine{
+    font-size: 20px;
   }
   #letsPlayButton {
-    width: 100px;
+    width: 200px;
   }
 }
 @media (min-width: 1100px) {
@@ -169,8 +164,8 @@ body {
 
 #homeButtonThree {
   font-family: 'Alegreya Sans SC', sans-serif;
-  background:  #85bbd9;
-  color: #225b7b;
+  background: transparent;
+  color: #85bbd9;
   opacity: .75;
   font-size: 20px;
   width: 500px;
@@ -183,13 +178,14 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 32px;
   color: #5394b8;
+  margin: 100px 30px;
 }
 
 #playerName {
   padding: 10px;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
   background-image: linear-gradient(to bottom right, #fad7d9, #c8e3f2);
 }
 
@@ -199,7 +195,7 @@ body {
   border-color: #225b7b;
   padding: 10px; 
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 5px;
   width: 150px;
 }
@@ -218,22 +214,24 @@ body {
 
 .thePlayers {
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .scores {
   font-family: 'Raleway', sans-serif;
   border-left: #e9a4a7;
+  font-size: 40px
 }
 
 #playerTurn {
   font-family: 'Raleway', sans-serif;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #insertQuestionHere {
 font-family: 'Raleway', sans-serif;
 font-size: 40px;
+color: #a64c50
 }
 
 .enterPlayers {
@@ -300,11 +298,11 @@ font-size: 40px;
   font-family: 'Alegreya Sans SC', sans-serif;
   color: #5394b8;
   margin: 10px;
-  font-size: 20px
+  font-size: 30px
 }
 
 #leadOn {
-  font-size: 30px
+  font-size: 40px
 }
 
 #playerScoreNames {
@@ -318,7 +316,7 @@ font-size: 40px;
   color: #121212;
   width: 200px;
   font-size: 40px;
-  margin: 20px
+  margin: 40px 20px
 }
 
 @media (max-width: 600px) {
@@ -329,13 +327,22 @@ font-size: 40px;
     font-size: 20px
   }
   #playerName {
-    font-size: 12px;
+    font-size: 17px;
     padding: 5px; 
   }
   #enterPlayerButton {
-    font-size: 10px
+    font-size: 15px
   }
   #insertQuestionHere {
     font-size: 26px;
+  }
+  #leadOn {
+    font-size: 30px
+  }
+  .thePlayers {
+    font-size: 20px
+  }
+  .scores {
+    font-size: 20px
   }
 }
