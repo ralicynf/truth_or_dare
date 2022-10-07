@@ -7,15 +7,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
-  padding: 40px 200px;
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto
 }
 
 #logo {
   color: #5394b8; 
   font-family: 'Righteous', sans-serif;
   font-size: 6vw;
+
 }
 
 #tagLine {
@@ -42,7 +42,6 @@ body {
   }
   #letsPlayButton {
     width: 100px;
-    font-size: 20px
   }
 }
 @media (min-width: 1100px) {
@@ -55,31 +54,31 @@ body {
   }
 }
 
+#bodyHome {
+  align-content: center;
+}
+
 #homeLogo {
   color: #8574ab; 
   font-family: 'Righteous', sans-serif;
-  font-size: 12vw;
-  max-width: 500px;
+  font-size: 70px;
   white-space: nowrap;
 }
 
 .homepagebuttons {
   display: grid;
-  grid-template-rows: 1fr .25fr 1fr .25fr 1fr;
+  grid-template-rows: 1fr .25fr 1fr .25fr 1fr .25fr;
   align-items: center;
 }
-
-
 
 #startGameButton {
   background-image: linear-gradient(to bottom right, #b2a6ce, #85bbd9);
   border: 5px; 
   border-color: #225b7b;
   border-radius: 25px; 
-  padding: 10px 30px; 
+  padding: 10px; 
   font-family: 'Playfair Display SC', serif;
   font-size: 5vw;
-  column-gap: 30px;
   height: 100px;
 }
 
@@ -89,7 +88,7 @@ body {
   border-color: #225b7b;
   border-radius: 25px; 
   font-size: 5vw;
-  padding: 10px 30px; 
+  padding: 10px; 
   font-family: 'Playfair Display SC', serif;
   height: 100px; 
   min-width: 100px;
@@ -101,28 +100,41 @@ body {
   border-color: #225b7b;
   border-radius: 25px; 
   font-size: 5vw;
-  padding: 10px 30px; 
+  padding: 10px; 
   font-family: 'Playfair Display SC', serif;
   column-gap: 30px;
   height: 100px;
 }
 
 @media (max-width: 600px) {
+  #bodyHome {
+    margin: 50px;
+    text-align: center;
+  }
   #homeLogo {
     font-size: 50px;
   }
  .homepagebuttons {
     width: 300px;
     font-size: 3vw;
+    padding: 50px;
  }
 }
 @media (min-width: 1100px) {
   #homeLogo {
-    font-size: 100px;
+    font-size: 75px;
   }
   .homepagebuttons {
     width: 500px;
+  }
+  #startGameButton {
     font-size: 50px;
+  }
+  #instructionsButton {
+    font-size: 50px;
+  }
+  #homeButton {
+    font-size: 50px
   }
 }
 
