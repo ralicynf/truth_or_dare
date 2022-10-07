@@ -71,7 +71,7 @@ body {
   align-items: center;
 }
 
-#startGameButton {
+#startGameButton , #instructionsButton , #homeButton{
   background-image: linear-gradient(to bottom right, #b2a6ce, #85bbd9);
   border: 5px; 
   border-color: #225b7b;
@@ -79,30 +79,6 @@ body {
   padding: 10px; 
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 5vw;
-  height: 100px;
-}
-
-#instructionsButton {
-  background-image: linear-gradient(to bottom right, #b2a6ce, #85bbd9);
-  border: 5px; 
-  border-color: #225b7b;
-  border-radius: 25px; 
-  font-size: 5vw;
-  padding: 10px; 
-  font-family: 'Montserrat Alternates', sans-serif;
-  height: 100px; 
-  min-width: 100px;
-}
-
-#homeButton {
-  background-image: linear-gradient(to bottom right, #b2a6ce, #85bbd9);
-  border: 5px; 
-  border-color: #225b7b;
-  border-radius: 25px; 
-  font-size: 5vw;
-  padding: 10px; 
-  font-family: 'Montserrat Alternates', sans-serif;
-  column-gap: 30px;
   height: 100px;
 }
 
@@ -156,7 +132,7 @@ body {
   font-weight: bold;
 }
 
-#startGameButtonTwo {
+#startGameButtonTwo , #homeButtonFour {
   background-image: linear-gradient(to bottom right, #dd9871, #e0c269);
   border: 5px; 
   border-color: #ac6b46;
@@ -167,16 +143,6 @@ body {
   font-size: 40px;
 }
 
-#homeButtonFour {
-  background-image: linear-gradient(to bottom right, #dd9871, #e0c269);
-  border: 5px; 
-  border-color: #ac6b46;
-  border-radius: 25px; 
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-weight: bold; 
-  min-width: 225px;
-  font-size: 40px
-}
 
 @media (max-width: 600px) {
   #intro {
@@ -187,6 +153,87 @@ body {
     font-size: 17px;
     margin: 20px
   }
+}
+
+.gameplay 
+
+#gameplayLogo {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bold;
+  font-size: 70px;
+  white-space: nowrap;
+  background-image:linear-gradient(to top left, #c75b5f, #5394b8);
+  color: #121212;
+  margin: 20px
+}
+
+#homeButtonThree {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  background:  #85bbd9;
+  color: #225b7b;
+  opacity: .75;
+  font-size: 20px;
+  width: 500px;
+  height: 30px;
+  border: #225b7b;
+  text-align: left
+}
+
+.playerNames {
+  font-family: 'Raleway', sans-serif;
+  font-size: 32px;
+  color: #5394b8;
+}
+
+#playerName {
+  padding: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-image: linear-gradient(to bottom right, #fad7d9, #c8e3f2);
+}
+
+#enterPlayerButton {
+  background-image:linear-gradient(to top left, #c75b5f, #5394b8);
+  border: 5px; 
+  border-color: #225b7b;
+  padding: 10px; 
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+#readyPlayButton {
+  background-image:linear-gradient(to bottom right, #a64c50, #e9a4a7);
+  border: 5px; 
+  border-color: #225b7b;
+  padding: 10px; 
+  margin: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  border-radius: 20px;
+  min-width: 400px;
+}
+
+.thePlayers {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.scores {
+  font-family: 'Raleway', sans-serif;
+  border-left: #e9a4a7;
+}
+
+#playerTurn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+#insertQuestionHere {
+font-family: 'Raleway', sans-serif;
+font-size: 40px;
 }
 
 .enterPlayers {
@@ -211,22 +258,84 @@ body {
 
 #truthButton {
   display: inline;
+  background-image:linear-gradient(to bottom right, #225b7b, #c8e3f2);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  width: 220px;
+  font-size: 35px;
+  border: 2px #225b7b; 
 }
 
 #dareButton {
   display: inline;
+  background-image:linear-gradient(to bottom right, #a64c50, #fad7d9);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  width: 220px;
+  font-size: 35px;
+  border: 2px #a64c50; 
 }
 
 #completedButton {
   display: none;
+  background-image:linear-gradient(to bottom right, #a64c50, #fad7d9);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  width: 220px;
+  font-size: 35px;
+  border: 2px #a64c50; 
 }
 
 #forfeitButton {
-  display: none
+  display: none;
+  background-image:linear-gradient(to bottom right, #225b7b, #c8e3f2);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  width: 220px;
+  font-size: 35px;
+  border: 2px #225b7b; 
 }
 
 #nextTurnButton {
   display: none
 }
 
+#leaderboard {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #5394b8;
+  margin: 10px;
+  font-size: 20px
+}
 
+#leadOn {
+  font-size: 30px
+}
+
+#playerScoreNames {
+  display: grid;
+  grid-template-columns: .5fr .5fr;
+}
+
+#thankYouNext {
+  background-image:linear-gradient(to top left, #c75b5f, #5394b8);
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: #121212;
+  width: 200px;
+  font-size: 40px;
+  margin: 20px
+}
+
+@media (max-width: 600px) {
+  #gameplayLogo {
+    font-size: 50px;
+  }
+  .playerNames {
+    font-size: 20px
+  }
+  #playerName {
+    font-size: 12px;
+    padding: 5px; 
+  }
+  #enterPlayerButton {
+    font-size: 10px
+  }
+  #insertQuestionHere {
+    font-size: 26px;
+  }
+}

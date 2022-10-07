@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alegreya+Sans+SC:wght@100&family=Alfa+Slab+One&family=Archivo+Black&family=Bangers&family=Cinzel&family=Jura:wght@300&family=Monoton&family=Montserrat+Alternates:wght@300&family=Playfair+Display+SC&family=Raleway:wght@200&family=Righteous&family=Rubik+Maze&family=Staatliches&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script defer src="gameplay.js"></script>
   <title>Truth or Dare!</title>
 </head>
-<body>
+<body class="gameplay">
   <header>
-    <h1>Truth or Dare!</h1>
+    <button type="button" id="homeButtonThree" onclick="location.href='home.html'">Home</button>
+    <h1 id="gameplayLogo">Truth or Dare!</h1>
   </header>
   <div class="enterPlayers" id="enterPlayerScreen">
     <section class="playerNames" id="mainSection">
-      <h2>Enter player names:</h2>
       <div>
         <form id="inputList">
           <input type="text" id="playerName" placeholder="Enter player name">
@@ -23,9 +23,8 @@
         </form>
       </div>
     </section>
-    <button type="button" id="readyPlayButton">Ready to play!</button>
     <div>
-      <button type="button" id="homeButtonThree" onclick="location.href='home.html'">Home</button>
+      <button type="button" id="readyPlayButton">Ready to play!</button>
     </div>
   </div>
 
@@ -45,7 +44,7 @@
   </div>
 
   <div class="scoreboard" id="leaderboard">
-      <h3>Leaderboard</h3>
+      <h3 id="leadOn">Leaderboard</h3>
       <div id="playerScoreNames">
         
       </div>
@@ -54,6 +53,7 @@
   <div id="nextTurnButton">
     <button type="button" id="thankYouNext">Next Turn</button>
   </div>
+  
     
 </body>
 </html>
