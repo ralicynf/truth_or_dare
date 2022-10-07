@@ -39,6 +39,7 @@
 
 ### ***Future Updates***
 
+- [ ] Fix bug with scoring that occurs if two players enter the same name
 - [ ] Adding a mini game or wheel of points for extra points
 - [ ] Adding an adults version of the game
 - [ ] Light Mode
