@@ -138,6 +138,57 @@ body {
   }
 }
 
+#intro {
+  color:#121212;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 70px;
+  background: linear-gradient(to bottom right, #dd9871, #e0c269);
+  border: 5px #ac6b46;
+}
+
+.paragraph {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+}
+
+#punishments {
+  color: #c75b5f;
+  font-weight: bold;
+}
+
+#startGameButtonTwo {
+  background-image: linear-gradient(to bottom right, #dd9871, #e0c269);
+  border: 5px; 
+  border-color: #ac6b46;
+  border-radius: 25px; 
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bold;
+  min-width: 225px;
+  font-size: 40px;
+}
+
+#homeButtonFour {
+  background-image: linear-gradient(to bottom right, #dd9871, #e0c269);
+  border: 5px; 
+  border-color: #ac6b46;
+  border-radius: 25px; 
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: bold; 
+  min-width: 225px;
+  font-size: 40px
+}
+
+@media (max-width: 600px) {
+  #intro {
+    font-size: 50px;
+    margin: 20px;
+  }
+  .paragraph {
+    font-size: 17px;
+    margin: 20px
+  }
+}
+
 .enterPlayers {
   display: inline-block
 }
